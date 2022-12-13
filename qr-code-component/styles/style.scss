@@ -1,6 +1,6 @@
-@use 'partials/colors';
+@use "partials/colors";
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 
 *,
 *::after,
@@ -14,12 +14,10 @@ body {
   font-size: 16px;
   height: 100vh;
   font-family: Outfit, serif;
-}
-
-main {
-  height: 97%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container {
