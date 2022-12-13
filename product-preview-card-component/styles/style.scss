@@ -1,0 +1,157 @@
+@use 'partials/colors';
+@use 'partials/mixins';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include mixins.font(Montserrat);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: colors.$primary-cream;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    width: 100vw;
+  }
+
+  .component {
+    margin: 0.8em auto;
+    background-color: colors.$neutral-white;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__image {
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+        max-width: 100%;
+        align-self: center;
+        margin: 0 0 0.8em 0;
+      }
+    }
+
+    &__text {
+      margin: 0 1.5em;
+
+      &--product-type {
+        @include mixins.font(Montserrat, 1em);
+        color: colors.$neutral-dark-grayish-blue;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+      }
+
+      &--product-title {
+        @include mixins.font(Fraunces, 2em);
+        color: colors.$neutral-dark-blue;
+      }
+
+      &--product-info {
+        @include mixins.font(Montserrat, 1em);
+        color: colors.$neutral-dark-grayish-blue;
+        margin: 1em 0 2em 0;
+      }
+
+      &--prices {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+      }
+
+      &--prices--price {
+        color: hsl(158, 36%, 37%);
+        @include mixins.font(Fraunces, 2em, 700);
+
+      }
+
+      &--prices--old-price {
+        justify-self: center;
+        margin: 0 1.4em;
+        text-decoration: line-through;
+        color: colors.$neutral-dark-grayish-blue;
+      }
+
+      &--button {
+        width: 100%;
+        border-radius: 0.4em;
+        padding: 0.8em 1em;
+        background-color: colors.$primary-dark-cyan;
+        border: none;
+        color: colors.$neutral-white;
+        @include mixins.font(Montserrat, 1.1em);
+        font-weight: 700;
+        margin: 0 0 1em 0;
+        cursor: pointer;
+      }
+
+      &--button:hover {
+        background-color: hsl(158, 36%, 30%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .component {
+    flex-direction: row;
+    max-width: 50em;
+    height: 32em;
+
+    &__image--mobile {
+      display: none;
+    }
+
+    &__image--desktop {
+      display: block;
+      margin: 0;
+      max-height: 100%;
+    }
+
+    &__text {
+      margin: 2em;
+
+      &--product-type {
+        margin: 1.9em 0;
+      }
+
+      &--product-title {
+        margin-bottom: 1em;
+      }
+
+      &--product-info {
+        margin-bottom: 1.7em;
+      }
+
+      &--prices {
+        margin: 3em 0;
+      }
+    }
+
+    &--button {
+      padding: 1.2em 2em;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

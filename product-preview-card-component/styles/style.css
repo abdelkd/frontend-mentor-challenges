@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    width: 100vw;
+  }
+  .component {
+    margin: 0.8em auto;
+    background-color: hsl(0deg, 0%, 100%);
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .component__image--desktop {
+    display: none;
+  }
+  .component__image--mobile {
+    display: block;
+    max-width: 100%;
+    align-self: center;
+    margin: 0 0 0.8em 0;
+  }
+  .component__text {
+    margin: 0 1.5em;
+  }
+  .component__text--product-type {
+    font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(228deg, 12%, 48%);
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+  .component__text--product-title {
+    font-family: Fraunces, serif, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    color: hsl(212deg, 21%, 14%);
+  }
+  .component__text--product-info {
+    font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: hsl(228deg, 12%, 48%);
+    margin: 1em 0 2em 0;
+  }
+  .component__text--prices {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+  }
+  .component__text--prices--price {
+    color: hsl(158deg, 36%, 37%);
+    font-family: Fraunces, serif, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .component__text--prices--old-price {
+    justify-self: center;
+    margin: 0 1.4em;
+    text-decoration: line-through;
+    color: hsl(228deg, 12%, 48%);
+  }
+  .component__text--button {
+    width: 100%;
+    border-radius: 0.4em;
+    padding: 0.8em 1em;
+    background-color: hsl(158deg, 36%, 37%);
+    border: none;
+    color: hsl(0deg, 0%, 100%);
+    font-family: Montserrat, serif, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-weight: 700;
+    margin: 0 0 1em 0;
+    cursor: pointer;
+  }
+  .component__text--button:hover {
+    background-color: hsl(158deg, 36%, 30%);
+  }
+}
+@media screen and (min-width: 720px) {
+  .component {
+    flex-direction: row;
+    max-width: 50em;
+    height: 32em;
+  }
+  .component__image--mobile {
+    display: none;
+  }
+  .component__image--desktop {
+    display: block;
+    margin: 0;
+    max-height: 100%;
+  }
+  .component__text {
+    margin: 2em;
+  }
+  .component__text--product-type {
+    margin: 1.9em 0;
+  }
+  .component__text--product-title {
+    margin-bottom: 1em;
+  }
+  .component__text--product-info {
+    margin-bottom: 1.7em;
+  }
+  .component__text--prices {
+    margin: 3em 0;
+  }
+  .component--button {
+    padding: 1.2em 2em;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
