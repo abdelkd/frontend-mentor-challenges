@@ -10,6 +10,7 @@ body {
   background-color: hsl(212deg, 45%, 89%);
   font-size: 16px;
   height: 100vh;
+  font-family: Outfit, serif;
 }
 
 main {
@@ -43,13 +44,13 @@ main {
   text-align: center;
 }
 .container__text--title {
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 700;
   margin-bottom: 0.5em;
   color: hsl(218deg, 44%, 22%);
 }
 .container__text--info {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 400;
   color: hsl(220deg, 15%, 55%);
 }

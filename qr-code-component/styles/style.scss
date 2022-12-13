@@ -13,6 +13,7 @@ body {
   background-color: colors.$light-gray;
   font-size: 16px;
   height: 100vh;
+  font-family: Outfit, serif;
 }
 
 main {
@@ -48,14 +49,14 @@ main {
     text-align: center;
 
     &--title {
-      font-size: 1.1em;
+      font-size: 1.3em;
       font-weight: 700;
       margin-bottom: 0.5em;
       color: colors.$dark-blue;
     }
 
     &--info {
-      font-size: 0.9em;
+      font-size: 1em;
       font-weight: 400;
       color: colors.$grayish-blue;
     }
