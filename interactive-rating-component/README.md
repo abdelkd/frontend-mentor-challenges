@@ -21,8 +21,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [Solution](https://github.com/abdelkd/frontend-mentor-challenges/tree/main/interactive-rating-component)
-<!-- TODO update live site -->
-- Live Site URL: [Live Site](https://frabjous-palmier-aad0f0.netlify.app/)
+- Live Site URL: [Live Site](https://spectacular-gingersnap-06dcd0.netlify.app/)
 
 ## My process
 
