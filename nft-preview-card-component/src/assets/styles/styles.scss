@@ -1,0 +1,132 @@
+@use 'partials/colors' as c;
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .card {
+    width: 20em;
+    min-height: 28em;
+    background-color: c.$very-dark-blue-card;
+    margin: 1.2em auto;
+    padding: 1.4em 1.6em;
+    border-radius: 1em;
+
+    &__image {
+      position: relative;
+      top: 0;
+      left: 0;
+
+      &--thumbnail {
+        display: flex;
+        max-width: 100%;
+        border-radius: 1em;
+        margin-bottom: 0.8em;
+      }
+
+      &--view-icon {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 255, 247, 0.3);
+        border-radius: 1em;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        padding: 110px;
+        transition: .4s ease;
+        cursor: pointer;
+        // top: 50%;
+        // left: 50%;
+        // margin-top: -134.4px;
+        // margin-left: -22px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__text {
+      &--heading a {
+        font-size: 1em;
+        margin: 0.8em 0;
+        color: c.$white;
+        text-decoration: none;
+        transition: all 400ms;
+
+        &:hover {
+          color: c.$cyan;
+        }
+      }
+
+      &--description {
+        color: c.$soft-blue;
+        font-size: 1em;
+        margin: 1em 0;
+      }
+    }
+
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1em;
+      padding-bottom: 1em;
+      border-bottom: 0.15em solid c.$very-dark-blue-line;
+
+      * {
+        display: flex;
+        align-items: center;
+        font-size: 1em;
+      }
+
+      img {
+        margin: 0 0.4em 0 0;
+      }
+
+      &--price {
+        color: c.$cyan;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      &--time-left {
+        color: c.$soft-blue;
+      }
+    }
+
+    &__creator {
+      display: flex;
+      align-items: center;
+      margin: 1em 0 0 0;
+      height: 2.5em;
+
+      img {
+        width: 2em;
+        margin-right: 1em;
+        border: 0.12em solid c.$white;
+        border-radius: 50%;
+      }
+
+      p {
+        font-size: 1em;
+        color: c.$soft-blue;
+        a {
+          font-weight: 400;
+          color: c.$white;
+          text-decoration: none;
+          cursor: pointer;
+          transition: 0.5 ease;
+
+          &:hover {
+            color: c.$cyan;
+          }
+        }
+      }
+    }
+  }
+}
