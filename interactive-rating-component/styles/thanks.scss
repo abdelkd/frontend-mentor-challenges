@@ -1,0 +1,41 @@
+@use 'partials/colors';
+@use 'partials/fonts';
+@use 'partials/mixins';
+
+.container__thanks {
+    display: flex;
+    flex-direction: column;
+    @include mixins.component;
+
+    &--image {
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 7em;
+        margin: 0 auto 1.5em;
+      }
+    }
+
+    &--selection {
+      font-size: 0.8em;
+      font-weight: 700;
+      margin: 1em auto;
+      padding: 0.4em 0.5em;
+      color: colors.$orange;
+      border-radius: 1em;
+      background-color: colors.$dark-blue;
+      cursor: default;
+    }
+
+    &--thank-you {
+      font-size: 1.7em;
+      margin: 0.2em auto 0.6em;
+      color: colors.$white;
+    }
+
+    &--apperciate {
+      color: colors.$light-grey;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,82 @@
+@use 'partials/colors';
+@use 'partials/fonts';
+@use 'partials/mixins';
+
+.container__rating-state {
+  display: flex;
+  flex-direction: column;
+  @include mixins.component;
+
+  &--star-icon img {
+    height: 1em;
+    width: 1em;
+    padding: 0.8em;
+    border-radius: 50%;
+    background-color: colors.$dark-blue;
+  }
+
+  &--text {
+    padding: 0.6em 0;
+    text-align: left;
+
+    &-heading {
+      color: colors.$white;
+      font-size: 1.7em;
+      font-weight: 700;
+      padding: 0.4em 0;
+    }
+
+    &-info {
+      color: colors.$light-grey;
+      font-size: 1em;
+      padding: 1em 0;
+    }
+
+    &-rating {
+      display: flex;
+      justify-content: space-between;
+      margin: 1em 0;
+      input[type='button'] {
+        height: 2.7em;
+        width: 2.7em;
+        border-radius: 50%;
+        border: none;
+        background-color: colors.$dark-blue;
+        color: colors.$medium-grey;
+        cursor: pointer;
+        transition: 500ms;
+
+        &:hover {
+          color: colors.$white;
+          background-color: colors.$orange;
+        }
+
+        &[data-selected='selected'] {
+          background-color: colors.$light-grey;
+          color: colors.$white;
+        }
+      }
+    }
+
+    &-submit {
+      display: block;
+      width: 100%;
+      height: 3em;
+      border-radius: 2em;
+      border: none;
+      background-color: colors.$orange;
+      color: colors.$white;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 300ms;
+
+      &:hover {
+        color: colors.$orange;
+        background-color: colors.$white;
+        
+      }
+    }
+  }
+}

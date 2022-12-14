@@ -1,0 +1,36 @@
+@use 'partials/mixins';
+@use 'partials/colors';
+@use 'partials/fonts';
+
+@import 'rating';
+@import 'thanks';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Overpass';
+  height: 100vh;
+  background-color: colors.$very-dark-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.attribution {
+  color: colors.$light-grey;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

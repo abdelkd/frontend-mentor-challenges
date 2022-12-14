@@ -1,0 +1,14 @@
+@use 'colors';
+
+@mixin component {
+  width: 65vw;
+  max-width: 17em;
+  padding: 1.5em;
+  background-image: linear-gradient(
+    to bottom right,
+    colors.$dark-blue,
+    colors.$very-dark-blue
+  );
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
