@@ -1,0 +1,131 @@
+@use 'partials/colors';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: colors.$very-pale-blue;
+  margin: 0 0.4em 0.8em;
+  box-shadow: hsl(224deg, 23%, 77%) 3px 16px 32px;
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__details {
+    width: 100%;
+    margin: 1em 0 0.6em 0;
+    padding: 0 2em;
+    text-align: center;
+
+    &--heading {
+      margin: 0 auto 1em;
+      font-size: 1.4em;
+      font-weight: 900;
+      color: colors.$dark-blue;
+    }
+
+    &--details {
+      padding-bottom: 2em;
+      color: colors.$desaturated-blue;
+    }
+  }
+
+  &__plan {
+    align-self: center;
+    padding: .5em;
+    background-color: hsl(224, 23%, 95%);
+    display: grid;
+    grid-template: 1fr / 3em repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    border-radius: .6em;
+    gap: 1.5em;
+
+    &--icon {
+      border-radius: 50%;
+    }
+
+    &--type {
+      // padding: 0 2.2em 0 1em;
+
+      p:first-child {
+        color: colors.$dark-blue;
+        font-weight: 700;
+        font-size: 0.9em;
+      }
+
+      p:last-child {
+        color: colors.$desaturated-blue;
+        font-size: 0.9em;
+        padding: 0.3em 0;
+      }
+    }
+
+    a {
+      color: colors.$bright-blue;
+      justify-self: end;
+
+      &:hover {
+        text-decoration: none;
+        color: hsl(245, 75%, 60%);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em;
+
+    &--proceed {
+      margin: 1em 0;
+      padding: 1em 3em;
+      border-radius: 1em;
+      background-color: colors.$bright-blue;
+      color: colors.$very-pale-blue;
+      border: none;
+      cursor: pointer;
+      box-shadow: hsl(224deg, 23%, 77%) 0px 8px 18px;
+      transition: .5s ease;
+      font-size: 1em;
+      font-weight: 700;
+
+      &:hover {
+        background-color: hsl(245, 75%, 66%);
+      }
+    }
+
+    &--cancel {
+      font-size: 1em;
+      font-weight: 700;
+      color: colors.$desaturated-blue;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      margin: 0.6em 0 1.1em;
+      transition: .5s ease;
+      
+      &:hover {
+        color: colors.$dark-blue;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 616px) {
+  .card {
+    width: 22em;
+
+    &__actions {
+      &--proceed {
+        padding: 1em 4em;
+      }
+    }
+  }
+}
