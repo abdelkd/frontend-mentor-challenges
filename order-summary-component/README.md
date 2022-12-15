@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/abdelkd/frontendmentor-challenges/tree/main/order-summary-component)
-- Live Site URL: [Live Site](https://unrivaled-kashata-d32218.netlify.app/)
+- Live Site URL: [Live Site](https://dainty-chaja-601d7c.netlify.app/)
 
 ## My process
 
